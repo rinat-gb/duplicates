@@ -6,7 +6,7 @@ public class Main {
         Set<Integer> uniqueNumbers = new HashSet<>();
         return list
                 .stream()
-                .filter(el -> uniqueNumbers.add(el))
+                .filter(el -> !uniqueNumbers.add(el))
                 .collect(Collectors.toList());
     }
 
