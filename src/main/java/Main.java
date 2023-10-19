@@ -4,11 +4,10 @@ import java.util.stream.Collectors;
 public class Main {
     private static List<Integer> findDuplicates(List<Integer> list) {
         Set<Integer> uniqueNumbers = new HashSet<>();
-        List<Integer> retList = list
+        return list
                 .stream()
                 .filter(el -> uniqueNumbers.add(el))
                 .collect(Collectors.toList());
-        return retList;
     }
 
     public static void main(String[] args) {
